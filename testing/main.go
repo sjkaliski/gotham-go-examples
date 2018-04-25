@@ -7,7 +7,7 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	data := map[string]interface{}{
-		"foo": "buzz",
+		"foo": "bar",
 	}
 
 	body, err := json.Marshal(data)
