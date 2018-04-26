@@ -5,12 +5,18 @@ import (
 	"net/http"
 )
 
+type Post struct {
+	Title string `json:"title"`
+	Body  string `json:"body"`
+}
+
 func handler(w http.ResponseWriter, r *http.Request) {
-	data := map[string]interface{}{
-		"foo": "bar",
+	post := &Post{
+		Title: "My Awesome GothamGo Talk",
+		Body:  "I hope this is going well...",
 	}
 
-	body, err := json.Marshal(data)
+	body, err := json.Marshal(post)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return

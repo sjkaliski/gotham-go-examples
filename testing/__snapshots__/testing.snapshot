@@ -4,5 +4,6 @@ Connection: close
 Content-Type: application/json
 
 {
-  "foo": "bar"
+  "body": "I hope this is going well...",
+  "title": "My Awesome GothamGo Talk"
 }
